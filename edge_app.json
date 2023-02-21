@@ -1,0 +1,16 @@
+{
+  "category" : "automation",
+  "description" : "Guide light service that controls switches",
+  "name" : "Simple Guide Light",
+  "public" : true,
+  "publisher" : {
+    "id" : 1
+  },
+  "short_description" : "Guide light service that controls switches",
+  "source_url" : "",
+  "tags" : [
+    "automation",
+    "controllable",
+    "lights"
+  ]
+}

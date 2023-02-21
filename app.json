@@ -1,0 +1,70 @@
+{
+  "author": "IoT Open",
+  "licence": "MIT",
+  "input": {
+    "trigger_functions": {
+      "required": true,
+      "name": "Movement functions",
+      "description": "These \"movement\" functions will be checked for movement.",
+      "type": "multi_function_selector",
+      "filter": {
+        "type": "movement"
+      }
+    },
+    "actuator_functions": {
+      "required": true,
+      "name": "Switches",
+      "description": "These functions will be turned on when triggered.",
+      "type": "multi_function_selector",
+      "filter": {
+        "type": "switch"
+      }
+    },
+    "time_on": {
+      "name": "On-time",
+      "type": "number",
+      "description": "In minutes",
+      "required": true
+    },
+    "on_time": {
+      "name": "On-time",
+      "type": "text",
+      "description": "When to turn on the app automatically, in hh:mm format.",
+      "required": false
+    },
+    "off_time": {
+      "name": "Off-time",
+      "type": "text",
+      "description": "When to turn off the app automatically, in hh:mm format.",
+      "required": false
+    },
+    "control_function": {
+      "required": false,
+      "name": "Function controllable",
+      "description": "Should a function be created to control on/off state of the app.",
+      "type": "toggle",
+      "true_value": "yes",
+      "false_value": "no"
+    }
+  },
+  "guide": [
+    {
+      "id": "stage_1",
+      "title": "Function selection",
+      "description": "Chose functions as triggers and actuators (switches to turn on) and the on-time.",
+      "input_fields": [
+        "trigger_functions",
+        "actuator_functions",
+        "time_on"
+      ]
+    },
+    {
+      "id": "stage_2",
+      "title": "Controlled",
+      "description": "When a control function is used it will create a switch to turn the Guide light on or off. If not used, the app will be on all the time.",
+      "input_fields": [
+        "control_function"
+      ]
+    }
+  ]
+}
